@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+}
+
+.App::-webkit-scrollbar {
+  display: none;
 }
 
 .App-logo {

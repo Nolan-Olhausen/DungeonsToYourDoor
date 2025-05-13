@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import ScrollButton from "./components/ScrollButton";
+import HomeSection from "./components/HomeSection";
 
 function App() {
   const [activePage, setActivePage] = useState("Home");
@@ -38,7 +39,7 @@ function App() {
           setActivePage(page);
         }}
       />
-      <div id="Home" className="section"></div>
+      <div id="Home" className="section"><HomeSection /></div>
       <div id="The DM" className="section"></div>
       <div id="Adventures" className="section"></div>
       <div id="Pricing" className="section"></div>
