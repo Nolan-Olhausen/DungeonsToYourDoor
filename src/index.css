@@ -99,20 +99,24 @@ body {
   font-size: var(--font-size-sm);
   cursor: pointer;
   transition: transform 0.3s ease;
+  max-height: 4.5rem;
 }
 
 .scroll-label {
   text-align: center;
   font-size: var(--font-size-sm);
-  line-height: 1.2;
+  line-height: 1;
+  margin: 0;
 }
 
 .scroll-line {
   display: block;
+  margin: 0;
 }
 
 .second-line {
   margin-top: 0.15rem; /* Reduce vertical gap */
+  margin-bottom: 0;
 }
 
 .scroll-button p {
@@ -124,12 +128,19 @@ body {
 }
 
 .arrow {
-  margin-top: 0;
+  margin-top: -0.5rem;
   font-size: 1.2rem;
   cursor: pointer;
   color: var(--color-primary);
   transition: transform 0.3s ease;
 }
+
+.stretched-arrow {
+  transform: scale(2.5, 1.2);
+  display: inline-block;
+  margin: 0;
+}
+
 
 
 

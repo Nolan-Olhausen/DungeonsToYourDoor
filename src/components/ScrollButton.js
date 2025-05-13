@@ -13,7 +13,7 @@ function ScrollButton({ isLastSection, onClick, label }) {
           )}
         </span>
         <span className="arrow">
-          {isLastSection ? <FaChevronUp /> : <FaChevronDown />}
+          {isLastSection ? <FaChevronUp className="stretched-arrow" /> : <FaChevronDown className="stretched-arrow" />}
         </span>
       </button>
     </div>
