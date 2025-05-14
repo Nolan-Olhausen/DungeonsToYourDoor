@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import ScrollButton from "./components/ScrollButton";
 import HomeSection from "./components/HomeSection";
+import DMSection from "./components/DMSection";
 
 function App() {
   const [activePage, setActivePage] = useState("Home");
@@ -40,7 +41,7 @@ function App() {
         }}
       />
       <div id="Home" className="section"><HomeSection /></div>
-      <div id="The DM" className="section"></div>
+      <div id="The DM" className="section"><DMSection /></div>
       <div id="Adventures" className="section"></div>
       <div id="Pricing" className="section"></div>
       <div id="Contact" className="section"></div>

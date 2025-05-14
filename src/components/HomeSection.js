@@ -1,8 +1,8 @@
 // src/components/HomeSection.js
 import React from "react";
-import "../index.css"; // or scoped CSS module if preferred
-import dtydImage from "../assets/dndLogoText.png"; // Replace with actual image
-import overlayImage from "../assets/dndTestOverlay.jpg"; // Replace with actual image
+import "../index.css";
+import dtydImage from "../assets/dndLogoText.png";
+import overlayImage from "../assets/campfire.png";
 
 function HomeSection() {
   return (
@@ -12,12 +12,9 @@ function HomeSection() {
       <div className="home-overlay-container">
         <img src={overlayImage} alt="Adventure Awaits" className="overlay-background" />
         <div className="overlay-text">
-          <h1>Epic Adventures
-            To Your Door
-          </h1>
-          <p>Bringing immersive, hand-crafted Dungeons & Dragons experiences straight to you, whether you're a seasoned adventurer or new to the realm. 
-
-Gather your party, roll the dice, and let the story unfold!</p>
+          <h1>Epic Adventures</h1>
+          <h1>To Your Door</h1>
+          <p>Bringing immersive, hand-crafted 5e experiences straight to you, whether you're a seasoned adventurer or new to the realm. <br /><br />Gather your party, roll the dice, and let the story unfold!</p>
         </div>
       </div>
     </div>
