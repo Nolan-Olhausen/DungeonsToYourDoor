@@ -7,14 +7,55 @@ import overlayImage from "../assets/campfire.png";
 function HomeSection() {
   return (
     <div className="home-section">
-      <img src={dtydImage} alt="Dungeons To Your Door" className="home-top-image" />
+      <div className="mobile-home-section">
+        <img
+          src={dtydImage}
+          alt="Dungeons To Your Door"
+          className="home-top-image"
+        />
 
-      <div className="home-overlay-container">
-        <img src={overlayImage} alt="Adventure Awaits" className="overlay-background" />
+        <div className="home-overlay-container">
+          <img
+            src={overlayImage}
+            alt="Adventure Awaits"
+            className="overlay-background"
+          />
+          <div className="overlay-text">
+            <h1>Epic Adventures</h1>
+            <h1>To Your Door</h1>
+            <p>
+              Bringing immersive, hand-crafted 5e experiences straight to you,
+              whether you're a seasoned adventurer or new to the realm. <br />
+              <br />
+              Gather your party, roll the dice, and let the story unfold!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="desktop-home-section">
         <div className="overlay-text">
           <h1>Epic Adventures</h1>
           <h1>To Your Door</h1>
-          <p>Bringing immersive, hand-crafted 5e experiences straight to you, whether you're a seasoned adventurer or new to the realm. <br /><br />Gather your party, roll the dice, and let the story unfold!</p>
+          <p>
+            Bringing immersive, hand-crafted 5e experiences straight to you,
+            whether you're a seasoned adventurer or new to the realm. <br />
+            <br />
+            Gather your party, roll the dice, and let the story unfold!
+          </p>
+        </div>
+        <div className="home-divider" />
+
+        <div className="home-image-container">
+          <img
+            src={overlayImage}
+            alt="Adventure Awaits"
+            className="overlay-background"
+          />
+          <img
+            src={dtydImage}
+            alt="Dungeons To Your Door"
+            className="dtyd-overlay-logo"
+          />
         </div>
       </div>
     </div>

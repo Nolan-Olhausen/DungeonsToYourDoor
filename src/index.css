@@ -40,7 +40,7 @@ body::-webkit-scrollbar {
 .navbar {
   width: 100%;
   height: 5vh;
-  background-color: transparent;
+  background-color: var(--color-background);
   position: fixed;
   top: 0;
   left: 0;
@@ -99,7 +99,8 @@ body::-webkit-scrollbar {
 
 .scroll-button-container {
   position: fixed;
-  bottom: 0.1rem;
+  bottom: 0;
+  height: 6vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -213,6 +214,10 @@ p {
 .home-section {
   display: flex;
   flex-direction: column;
+}
+
+.desktop-home-section {
+  display: none;
 }
 
 .home-top-image {
@@ -525,3 +530,57 @@ p {
   transform: scale(1.1);
 }
 
+@media (min-width: 768px) {
+
+  .navbar {
+    border-bottom: var(--color-primary) 0.15em solid;
+  }
+  
+  .nav-button:hover,
+  .nav-button.active {
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+
+  .scroll-button-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--color-background);
+    border-top: var(--color-primary) 0.15em solid;
+    display: flex;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    position: relative;
+  }
+
+  .mobile-home-section {
+    display: none;
+  }
+
+  .desktop-home-section {
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    height: 85vh;
+    position: relative;
+    background-color: var(--color-background);
+  }
+
+  .overlay-background {
+    clip-path: polygon(0% 100%, 20% 0%, 100% 0%, 100% 100%);
+  }
+
+  .home-divider {
+    
+  }
+
+}
