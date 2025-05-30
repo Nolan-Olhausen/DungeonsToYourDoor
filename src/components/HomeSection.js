@@ -43,7 +43,6 @@ function HomeSection() {
             Gather your party, roll the dice, and let the story unfold!
           </p>
         </div>
-        <div className="home-divider" />
 
         <div className="home-image-container">
           <img
@@ -54,7 +53,7 @@ function HomeSection() {
           <img
             src={dtydImage}
             alt="Dungeons To Your Door"
-            className="dtyd-overlay-logo"
+            className="home-top-image"
           />
         </div>
       </div>
