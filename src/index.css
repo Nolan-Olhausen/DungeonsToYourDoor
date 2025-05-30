@@ -570,13 +570,46 @@ p {
     display: flex;
     flex-direction: row;
     width: 95vw;
-    height: 85vh;
+    height: 90vh;
     position: relative;
     background-color: var(--color-background);
   }
 
   .overlay-background {
     clip-path: polygon(0% 100%, 20% 0%, 100% 0%, 100% 100%);
+  }
+
+  .scroll-label {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .scroll-line,
+  .second-line {
+    display: inline;
+  }
+
+  .second-line::before {
+    content: " ";
+  }
+
+  .arrow {
+    margin-top: -1rem;
+  }
+
+  .scroll-button-container {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+  }
+
+  .scroll-button {
+    display: flex;
+    height: 100%;
+    margin-top: 1rem;
+    justify-content: space-between;
+    flex-direction: column;     /* Stack label above arrow */
+    align-items: center;        /* Horizontal centering */
   }
 
   .home-divider {
