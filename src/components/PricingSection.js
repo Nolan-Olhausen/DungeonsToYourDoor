@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import "../index.css";
 import d20Icon from "../assets/d20FillLogo.png";
 import campaignImage from "../assets/inn.jpg";
-import overlayImage from "../assets/campfire.png";
+import catBucketsImage from "../assets/catBuckets.png";
+import rockHardPlaceImage from "../assets/rockHardPlace.png";
 
 const campaigns = [
   {
@@ -16,20 +17,20 @@ const campaigns = [
     backgroundImage: campaignImage,
   },
   {
-    title: "Forest of Whispers",
+    title: "A Cat Named Buckets",
     players: "Maximum 8 Players",
-    description: "Uncover secrets hidden in the whispering woods...",
+    description: "A storm batters the Maiden’s Wail as it sails the high seas, but something more sinister than thunder stalks the decks, one of the crew has been murdered. Trapped aboard with nowhere to run, the adventurers must navigate treacherous alliances, hidden motives, and ghostly whispers in the dark to unmask the killer before the ship claims more souls.",
     deposit: "$100 Deposit",
     price: "$50 Per Player",
-    backgroundImage: campaignImage,
+    backgroundImage: catBucketsImage,
   },
   {
-    title: "Siege of Blackspire",
+    title: "Between A Rock And A Hard Place",
     players: "Maximum 8 Players",
-    description: "Defend a stronghold in a high-stakes siege scenario...",
+    description: "In the shadowed alleys and marble halls of Stoneport, whispers of a long-lost heir ignite a quiet rebellion. The adventurers must navigate a web of political intrigue, charming nobles, rallying common folk, or striking covert deals with the city's underworld to sway the city’s power players and tip the scales toward the rightful crown... or their own ambitions.",
     deposit: "$100 Deposit",
     price: "$50 Per Player",
-    backgroundImage: campaignImage,
+    backgroundImage: rockHardPlaceImage,
   },
 ];
 
@@ -106,12 +107,37 @@ function PricingSection() {
           </p>
         </div>
 
-        <div className="dm-image-container">
-          <img
-            src={overlayImage}
-            alt="Adventure Awaits"
-            className="overlay-background"
-          />
+        <div className="campaign-image-container">
+          {campaigns.map((camp, index) => (
+            <div
+              key={index}
+              className={`campaign-slide ${
+                index === currentIndex ? "active" : ""
+              }`}
+              style={{ "--bg-image": `url(${camp.backgroundImage})` }}
+            >
+              <div className="campaign-background" />
+              <div className="campaign-text">
+                <h1>{camp.title}</h1>
+                <p className="campaign-players">{camp.players}</p>
+                <p className="campaign-description">{camp.description}</p>
+                <h3>{camp.deposit}</h3>
+                <h3>{camp.price}</h3>
+              </div>
+            </div>
+          ))}
+
+          <div className="image-nav">
+            {campaigns.map((_, index) => (
+              <img
+                key={index}
+                src={d20Icon}
+                alt={`Go to image ${index}`}
+                className={`nav-icon ${index === currentIndex ? "active" : ""}`}
+                onClick={() => setCurrentIndex(index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

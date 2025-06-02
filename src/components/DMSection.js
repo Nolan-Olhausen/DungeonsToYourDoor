@@ -1,7 +1,7 @@
 // src/components/DMSection.js
 import React from "react";
 import "../index.css";
-import dmImage from "../assets/dmImage.png"; // Replace with actual image path
+import dmImage from "../assets/tylerCut.png"; // Replace with actual image path
 
 function DMSection() {
   return (
@@ -17,7 +17,9 @@ function DMSection() {
           <br />
           Just gather your party, I’ll handle the rest.
         </p>
-        <img src={dmImage} alt="Tyler" className="dm-image" />
+        <div className="dm-image-container">
+          <img src={dmImage} alt="Tyler" className="dm-image" />
+        </div>
       </div>
       <div className="desktop-dm-section">
         <div className="overlay-text">
