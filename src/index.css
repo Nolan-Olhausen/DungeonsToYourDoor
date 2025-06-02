@@ -373,18 +373,30 @@ p {
 
 .slideshow-image {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   clip-path: polygon(0% 0%, 100% 12.3%, 100% 100%, 0% 87.7%);
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
+  opacity: 1;
   z-index: 0;
+  pointer-events: none;
 }
 
 .slideshow-image.active {
   opacity: 1;
   z-index: 1;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .slideshow-controls {
@@ -632,6 +644,7 @@ p {
     position: absolute;
     bottom: 0;
     width: 40vw;
+    overflow: visible;
   }
 
   .home-image-container {
@@ -657,6 +670,8 @@ p {
   }
 
   .slideshow-controls button {
+    height: 100%;
+    padding-top: 1em;
     width: 50%;
   }
 
@@ -664,15 +679,17 @@ p {
     background-color: var(--color-primary);
   }
 
-  .slideshow-controls button.right {
-    clip-path: polygon(
-      0 0,
-      calc(100% + 1vw) 0,
-      100% 100%,
-      0 100%,
-    );
+  .slideshow-controls button.right.active::after {
+    content: "";
+    position: absolute;
+    right: -5vw;
+    top: 0;
+    width: 5vw;
+    height: 100%;
+    background-color: var(--color-primary);
+    z-index: 0;
   }
-
+  
   .home-image-container::before {
     content: "";
     position: absolute;
@@ -683,11 +700,10 @@ p {
     background: var(--color-primary);
     clip-path: polygon(calc(100% - 0.15em) 0%,
         100% 0%,
-        0.15em 100%,
-        0% 100%);
+        calc(0.15em - 1px) 100%,
+        -1px 100%);
     pointer-events: none;
     z-index: 2;
-    /* Ensure it sits above the background */
   }
 
   .dm-image-container::before {
@@ -710,7 +726,7 @@ p {
   .dm-image {
     padding-left: 15vw;
     max-width: 30vw;
-    max-height: 60vh;
+    max-height: 100%;
   }
 
   .overlay-background {
@@ -763,7 +779,5 @@ p {
     align-items: center;
     /* Horizontal centering */
   }
-
-  .home-divider {}
 
 }

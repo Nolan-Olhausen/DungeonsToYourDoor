@@ -31,8 +31,8 @@ function AdventuresSection() {
             <h1>In Action</h1>
             <p>
               Where heroes rose to the challenge, epic battles were fought, and
-              unforgettable stories were made. Browse through our gallery to get a
-              glimpse of the action and excitement that await in your next
+              unforgettable stories were made. Browse through our gallery to get
+              a glimpse of the action and excitement that await in your next
               adventure!
             </p>
           </>
@@ -54,8 +54,9 @@ function AdventuresSection() {
               key={index}
               src={img}
               alt={`Adventure ${index}`}
-              className={`slideshow-image ${index === currentIndex ? "active" : ""
-                }`}
+              className={`slideshow-image ${
+                index === currentIndex ? "active" : ""
+              }`}
             />
           ))}
 
@@ -103,20 +104,20 @@ function AdventuresSection() {
                 <h1>The Adventures</h1>
                 <h1>In Action</h1>
                 <p>
-                  Where heroes rose to the challenge, epic battles were fought, and
-                  unforgettable stories were made. Browse through our gallery to get a
-                  glimpse of the action and excitement that await in your next
-                  adventure!
+                  Where heroes rose to the challenge, epic battles were fought,
+                  and unforgettable stories were made. Browse through our
+                  gallery to get a glimpse of the action and excitement that
+                  await in your next adventure!
                 </p>
               </>
             ) : (
               <>
                 <h1>Folk Tales</h1>
                 <p>
-                  Real adventurers, real stories. Read what past players have to say
-                  about their epic quests, unforgettable characters, and the
-                  adventures that brought them together. Ready to create your own
-                  story?
+                  Real adventurers, real stories. Read what past players have to
+                  say about their epic quests, unforgettable characters, and the
+                  adventures that brought them together. Ready to create your
+                  own story?
                 </p>
               </>
             )}
@@ -133,7 +134,9 @@ function AdventuresSection() {
               Gallery
             </button>
             <button
-              className={activeSet === "testimonials" ? "active" : ""}
+              className={`${
+                activeSet === "testimonials" ? "active" : ""
+              } right`}
               onClick={() => {
                 setActiveSet("testimonials");
                 setCurrentIndex(0);
@@ -146,15 +149,16 @@ function AdventuresSection() {
         </div>
 
         <div className="home-image-container">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt={`Adventure ${index}`}
-              className={`slideshow-image ${index === currentIndex ? "active" : ""
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Adventure ${index}`}
+                className={`slideshow-image ${
+                  index === currentIndex ? "active" : ""
                 }`}
-            />
-          ))}
+              />
+            ))}
 
           <div className="image-nav">
             {images.map((_, index) => (
