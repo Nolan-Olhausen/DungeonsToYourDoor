@@ -1,6 +1,5 @@
 import React from "react";
 import "../index.css";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 function ScrollButton({ isLastSection, onClick, label }) {
   return (
@@ -12,9 +11,7 @@ function ScrollButton({ isLastSection, onClick, label }) {
             <span className="scroll-line second-line">{label.line2}</span>
           )}
         </span>
-        <span className="arrow">
-          {isLastSection ? <FaChevronUp className="stretched-arrow" /> : <FaChevronDown className="stretched-arrow" />}
-        </span>
+        <span className={`${isLastSection ? "chevronUp" : "chevronDown"}`}></span>
       </button>
     </div>
   );
