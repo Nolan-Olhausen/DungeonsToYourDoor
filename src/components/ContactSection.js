@@ -1,6 +1,7 @@
 // src/components/ContactSection.js
 import React from "react";
 import "../index.css";
+import DiceDesktopScene from "./DiceScene";
 
 function ContactSection() {
   return (
@@ -21,7 +22,7 @@ function ContactSection() {
         </div>
 
         <div className="home-image-container">
-          
+          <DiceDesktopScene />
         </div>
       </div>
     </div>
