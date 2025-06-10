@@ -16,15 +16,13 @@ const Wall = ({ rotation, position }) => {
 };
 
 export default function Walls() {
-  const { camera, viewport } = useThree();
-  const aspect = viewport.aspect;
-  const distance = camera.position.z;
+  const { size, camera } = useThree();
+  const { zoom } = camera;
 
-  // Approximate visible half-width and half-height at z=0
-  const height = 2 * Math.tan((camera.fov * Math.PI) / 360) * distance;
-  const width = height * aspect;
-
-  const wallOffset = -1.5; // slight offset to prevent clipping
+  // Orthographic camera bounds at z=0
+  const width = size.width / zoom / 2;
+  const height = size.height / zoom / 2;
+  const wallOffset = 3; // Buffer to avoid clipping at edges
 
   return (
     <>
