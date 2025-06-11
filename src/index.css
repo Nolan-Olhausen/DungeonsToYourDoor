@@ -20,6 +20,7 @@ body {
   /* Firefox */
   -ms-overflow-style: none;
   /* IE 10+ */
+  touch-action: none;
 }
 
 html::-webkit-scrollbar,
