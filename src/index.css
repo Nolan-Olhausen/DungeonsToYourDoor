@@ -270,19 +270,11 @@ p {
   flex-direction: column;
 }
 
-.desktop-home-section {
-  display: none;
-}
-
-.desktop-dm-section {
-  display: none;
-}
-
-.desktop-adventures-section {
-  display: none;
-}
-
-.desktop-pricing-section {
+.desktop-home-section,
+.desktop-dm-section,
+.desktop-adventures-section,
+.desktop-pricing-section,
+.desktop-contact-section {
   display: none;
 }
 
@@ -505,6 +497,14 @@ p {
   margin: 0 auto;
   border: 0.15em solid var(--color-primary);
   border-radius: 1.5em;
+}
+
+.mobile-dice {
+  width: min(95vw, 45vh);
+  height: min(95vw, 45vh);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin: 0 auto;
 }
 
 .pricing-section {

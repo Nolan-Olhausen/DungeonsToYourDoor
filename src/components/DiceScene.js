@@ -5,7 +5,7 @@ import { Icosahedron } from "@react-three/drei";
 import { Physics, usePlane, useConvexPolyhedron } from "@react-three/cannon";
 import { Vector3, EdgesGeometry, LineSegments, LineBasicMaterial } from "three";
 import DiceModel from "./DiceModel";
-import Walls from "./Walls";
+import { DesktopWalls, MobileWalls } from "./Walls";
 
 const createIcosahedronUVs = (geometry) => {
   const uvs = [];
@@ -192,7 +192,7 @@ const Plane = ({
   );
 };
 
-export default function DiceDesktopScene() {
+export function DiceDesktopScene() {
   return (
     <div style={{ width: "100%", height: "100%" }}>
       <Canvas
@@ -212,7 +212,7 @@ export default function DiceDesktopScene() {
           <Plane position={[0, 0, 0]} rotation={[0, 0, 0]} />
 
           {/* Walls */}
-          <Walls />
+          <DesktopWalls />
 
           {/* Dice */}
           {/* <DiceModel position={[0, 0, 3]} rotation={[0, 0, 0]} /> */}
@@ -222,3 +222,29 @@ export default function DiceDesktopScene() {
     </div>
   );
 }
+
+export function DiceMobileScene() {
+  return (
+    <div style={{ width: "100%", height: "100%" }}>
+      <Canvas
+        shadows
+        orthographic
+        camera={{
+          zoom: 25, // Less zoom to account for smaller screens
+          position: [0, 0, 16], // Slightly pulled back to fit scene vertically
+          near: 0.1,
+          far: 1000,
+        }}
+      >
+        <ambientLight intensity={3} />
+
+        <Physics gravity={[0, 0, -9.81]}>
+          <Plane position={[0, 0, 0]} rotation={[0, 0, 0]} />
+          <MobileWalls />
+          <D20 position={[0, 0, 3]} rotation={[0, 0, 0]} />
+        </Physics>
+      </Canvas>
+    </div>
+  );
+}
+
