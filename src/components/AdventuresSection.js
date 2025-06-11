@@ -1,17 +1,18 @@
 // src/components/AdventuresSection.js
 import React, { useState, useEffect } from "react";
 import "../index.css";
-import testImage from "../assets/campfire.png";
-import testImage2 from "../assets/dndTestOverlay.jpg";
+import orcImage from "../assets/orcExcursion.png";
+import cityBattle from "../assets/cityBattle.png";
+import campfire from "../assets/campfire.png";
 import d20Icon from "../assets/d20FillLogo.png";
 
 function AdventuresSection() {
   const [activeSet, setActiveSet] = useState("gallery");
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const galleryImages = [testImage, testImage2, testImage];
+  const galleryImages = [orcImage, cityBattle, campfire];
 
-  const testimonialImages = [testImage2, testImage, testImage2, testImage];
+  const testimonialImages = [orcImage, cityBattle, orcImage, campfire];
 
   const images = activeSet === "gallery" ? galleryImages : testimonialImages;
 

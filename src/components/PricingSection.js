@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "../index.css";
 import d20Icon from "../assets/d20FillLogo.png";
-import campaignImage from "../assets/inn.jpg";
+import campaignImage from "../assets/whiteFlag.png";
 import catBucketsImage from "../assets/catBuckets.png";
 import rockHardPlaceImage from "../assets/rockHardPlace.png";
 
@@ -52,7 +52,7 @@ function PricingSection() {
         <p>
           Every quest has its cost, but glory, laughter, and unforgettable
           memories are always included. Choose from a selection of ready-to-run
-          one-shot adventures, each priced for epic fun and hassle-free game
+          one-shots or contact the DM for custom-built adventures, each priced for epic fun and hassle-free game
           nights. Your next great story is just a roll away.
         </p>
 
@@ -60,9 +60,8 @@ function PricingSection() {
           {campaigns.map((camp, index) => (
             <div
               key={index}
-              className={`pricing-card ${
-                index === currentIndex ? "active" : ""
-              }`}
+              className={`pricing-card ${index === currentIndex ? "active" : ""
+                }`}
               style={{
                 "--bg-image": `url(${camp.backgroundImage})`,
               }}
@@ -101,9 +100,9 @@ function PricingSection() {
           <h1>Adventure</h1>
           <p>
             Every quest has its cost, but glory, laughter, and unforgettable
-            memories are always included. Choose from a selection of
-            ready-to-run one-shot adventures, each priced for epic fun and
-            hassle-free game nights. Your next great story is just a roll away.
+            memories are always included. Choose from a selection of ready-to-run
+            one-shots or contact the DM for custom-built adventures, each priced for epic fun and hassle-free game
+            nights. Your next great story is just a roll away.
           </p>
         </div>
 
@@ -111,9 +110,8 @@ function PricingSection() {
           {campaigns.map((camp, index) => (
             <div
               key={index}
-              className={`campaign-slide ${
-                index === currentIndex ? "active" : ""
-              }`}
+              className={`campaign-slide ${index === currentIndex ? "active" : ""
+                }`}
               style={{ "--bg-image": `url(${camp.backgroundImage})` }}
             >
               <div className="campaign-background" />

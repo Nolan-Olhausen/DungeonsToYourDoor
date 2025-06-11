@@ -26,6 +26,9 @@ function ContactSection() {
           >
             Dungeonstoyourdoor@gmail.com
           </a>
+          <br />
+          <br />
+          <strong>By Sending:</strong> 707 812-0276
         </p>
         <div className="dm-image-container">
           <div className="mobile-dice">
@@ -54,6 +57,9 @@ function ContactSection() {
             >
               Dungeonstoyourdoor@gmail.com
             </a>
+            <br />
+            <br />
+            <strong>By Sending:</strong> 707 812-0276
           </p>
         </div>
 
