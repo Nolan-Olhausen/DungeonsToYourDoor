@@ -84,7 +84,7 @@ function AdventuresSection() {
             <img src={d20Icon} alt="D20 Icon" />
             Gallery
           </button>
-          <button
+          {/* <button
             className={activeSet === "testimonials" ? "active" : ""}
             onClick={() => {
               setActiveSet("testimonials");
@@ -93,7 +93,7 @@ function AdventuresSection() {
           >
             <img src={d20Icon} alt="D20 Icon" />
             Testimonials
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="desktop-adventures-section">
@@ -133,7 +133,7 @@ function AdventuresSection() {
               <img src={d20Icon} alt="D20 Icon" />
               Gallery
             </button>
-            <button
+            {/* <button
               className={`${
                 activeSet === "testimonials" ? "active" : ""
               } right`}
@@ -144,7 +144,7 @@ function AdventuresSection() {
             >
               <img src={d20Icon} alt="D20 Icon" />
               Testimonials
-            </button>
+            </button> */}
           </div>
         </div>
 

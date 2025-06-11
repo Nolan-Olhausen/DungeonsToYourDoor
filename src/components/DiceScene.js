@@ -90,6 +90,8 @@ const D20 = (props) => {
   const [ref, api] = useConvexPolyhedron(() => ({
     mass: 1,
     args: [vertices, faces],
+    restitution: 0.7,
+    friction: 0.3,
     ...props,
   }));
 
@@ -125,13 +127,20 @@ const D20 = (props) => {
   }, [geometry]);
 
   const materials = Array.from({ length: 20 }, (_, i) => {
-    const texture = createFaceTexture((i + 1).toString());
+    let number = (i + 1).toString();
+
+    // Add distinguishing dot for 6 and 9
+    if (number === "6" || number === "9") {
+      number += ".";
+    }
+
+    const texture = createFaceTexture(number);
     return <meshBasicMaterial key={i} attach={`material-${i}`} map={texture} />;
   });
 
   const rollDice = () => {
-    const lateralForce = 8 + Math.random() * 4; // 8–12 units/s
-    const upwardForce = 6 + Math.random() * 2; // 6–8 units/s
+    const lateralForce = 20 + Math.random() * 6;
+    const upwardForce = 8 + Math.random() * 2;
     const directionAngle = Math.random() * 2 * Math.PI; // 360°
     const vx = Math.cos(directionAngle) * lateralForce;
     const vy = Math.sin(directionAngle) * lateralForce;
@@ -139,7 +148,7 @@ const D20 = (props) => {
 
     api.velocity.set(vx, vy, vz);
 
-    const spinStrength = 15;
+    const spinStrength = 20;
     api.angularVelocity.set(
       (Math.random() - 0.5) * spinStrength,
       (Math.random() - 0.5) * spinStrength,
@@ -169,7 +178,12 @@ const Plane = ({
   position = [0, 0, 0],
   color = "#fff",
 }) => {
-  const [ref] = usePlane(() => ({ position, rotation }));
+  const [ref] = usePlane(() => ({
+    position,
+    rotation,
+    restitution: 0.5,
+    friction: 0.3,
+  }));
   return (
     <mesh ref={ref} receiveShadow>
       <planeGeometry args={[1000, 1000]} />

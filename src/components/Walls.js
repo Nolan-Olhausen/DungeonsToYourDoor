@@ -6,6 +6,8 @@ const Wall = ({ rotation, position }) => {
   const [ref] = usePlane(() => ({
     rotation,
     position,
+    restitution: 0.5,
+    friction: 0.3,
   }));
   return (
     <mesh ref={ref}>

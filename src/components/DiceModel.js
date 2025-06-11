@@ -75,7 +75,7 @@ export default function DiceModel({ position = [0, 2, 0], onRoll }) {
   );
 
   const rollDice = () => {
-    const lateralForce = 8 + Math.random() * 4; // 8–12 units/s
+    const lateralForce = 20 + Math.random() * 4; // 8–12 units/s
     const upwardForce = 6 + Math.random() * 2; // 6–8 units/s
     const directionAngle = Math.random() * 2 * Math.PI; // 360°
     const vx = Math.cos(directionAngle) * lateralForce;
