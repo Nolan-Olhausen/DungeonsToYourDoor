@@ -421,24 +421,15 @@ p {
   height: 100%;
   object-fit: cover;
   clip-path: polygon(0% 0%, 100% 12.3%, 100% 100%, 0% 87.7%);
-  opacity: 1;
-  z-index: 0;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  z-index: 1;
   pointer-events: none;
 }
 
 .slideshow-image.active {
   opacity: 1;
-  z-index: 1;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  z-index: 2;
 }
 
 .slideshow-controls {
@@ -564,6 +555,8 @@ p {
   font-size: var(--h1-size-base);
   margin-top: 0.25em;
   margin-bottom: 0;
+  margin-right: 0.25em;
+  margin-left: 0.25em;
   line-height: 1;
 }
 
@@ -672,11 +665,24 @@ p {
     background-color: var(--color-background);
   }
 
+  .slideshow-wrapper {
+    z-index: 2;
+  }
+
   .slideshow-controls {
     position: absolute;
     bottom: 0;
     width: 40vw;
     overflow: visible;
+  }
+
+  .home-image-container-back {
+    position: relative;
+    width: 60vw;
+    height: 100%;
+    background-color: var(--color-background);
+    clip-path: polygon(0% 100%, 20vw 0%, 100% 0%, 100% 100%);
+    z-index: 1;
   }
 
   .home-image-container {
@@ -686,6 +692,23 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
+  }
+
+  .home-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: 100%;
+    background: var(--color-primary);
+    clip-path: polygon(calc(100% - 0.15em) 0%,
+        100% 0%,
+        calc(0.15em - 1px) 100%,
+        -1px 100%);
+    pointer-events: none;
+    z-index: 10;
   }
 
   .dm-image-container {
@@ -729,22 +752,6 @@ p {
     height: 100%;
     background-color: var(--color-primary);
     z-index: 0;
-  }
-  
-  .home-image-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20vw;
-    height: 100%;
-    background: var(--color-primary);
-    clip-path: polygon(calc(100% - 0.15em) 0%,
-        100% 0%,
-        calc(0.15em - 1px) 100%,
-        -1px 100%);
-    pointer-events: none;
-    z-index: 2;
   }
 
   .dm-image-container::before {

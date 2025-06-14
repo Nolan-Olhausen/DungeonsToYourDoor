@@ -1,5 +1,5 @@
 // src/components/PricingSection.js
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../index.css";
 import d20Icon from "../assets/d20FillLogo.png";
 import campaignImage from "../assets/whiteFlag.png";
@@ -36,13 +36,24 @@ const campaigns = [
 
 function PricingSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const timerRef = useRef(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const resetTimer = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % campaigns.length);
     }, 8000);
-    return () => clearInterval(interval);
+  };
+
+  useEffect(() => {
+    resetTimer();
+    return () => clearInterval(timerRef.current);
   }, []);
+
+  const handleNavClick = (index) => {
+    setCurrentIndex(index);
+    resetTimer();
+  };
 
   return (
     <div className="pricing-section" id="Pricing">
@@ -89,7 +100,7 @@ function PricingSection() {
               src={d20Icon}
               alt={`Go to card ${index}`}
               className={`nav-icon ${index === currentIndex ? "active" : ""}`}
-              onClick={() => setCurrentIndex(index)}
+              onClick={() => handleNavClick(index)}
             />
           ))}
         </div>
@@ -132,7 +143,7 @@ function PricingSection() {
                 src={d20Icon}
                 alt={`Go to image ${index}`}
                 className={`nav-icon ${index === currentIndex ? "active" : ""}`}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => handleNavClick(index)}
               />
             ))}
           </div>

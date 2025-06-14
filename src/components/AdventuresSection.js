@@ -1,5 +1,5 @@
 // src/components/AdventuresSection.js
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../index.css";
 import orcImage from "../assets/orcExcursion.png";
 import cityBattle from "../assets/cityBattle.png";
@@ -9,19 +9,34 @@ import d20Icon from "../assets/d20FillLogo.png";
 function AdventuresSection() {
   const [activeSet, setActiveSet] = useState("gallery");
   const [currentIndex, setCurrentIndex] = useState(0);
+  const timerRef = useRef(null);
 
   const galleryImages = [orcImage, cityBattle, campfire];
-
   const testimonialImages = [orcImage, cityBattle, orcImage, campfire];
-
   const images = activeSet === "gallery" ? galleryImages : testimonialImages;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const resetTimer = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 8000);
-    return () => clearInterval(interval);
+  };
+
+  useEffect(() => {
+    resetTimer();
+    return () => clearInterval(timerRef.current);
   }, [images]);
+
+  const handleNavClick = (index) => {
+    setCurrentIndex(index);
+    resetTimer();
+  };
+
+  const handleSetChange = (setName) => {
+    setActiveSet(setName);
+    setCurrentIndex(0);
+    resetTimer();
+  };
 
   return (
     <div className="adventures-section" id="Adventures">
@@ -50,16 +65,18 @@ function AdventuresSection() {
         )}
 
         <div className="slideshow-container">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt={`Adventure ${index}`}
-              className={`slideshow-image ${
-                index === currentIndex ? "active" : ""
-              }`}
-            />
-          ))}
+          <div className="slideshow-wrapper">
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Adventure ${index}`}
+                className={`slideshow-image ${
+                  index === currentIndex ? "active" : ""
+                }`}
+              />
+            ))}
+          </div>
 
           <div className="image-nav">
             {images.map((_, index) => (
@@ -68,7 +85,7 @@ function AdventuresSection() {
                 src={d20Icon}
                 alt={`Go to image ${index}`}
                 className={`nav-icon ${index === currentIndex ? "active" : ""}`}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => handleNavClick(index)}
               />
             ))}
           </div>
@@ -77,26 +94,21 @@ function AdventuresSection() {
         <div className="slideshow-controls">
           <button
             className={activeSet === "gallery" ? "active" : ""}
-            onClick={() => {
-              setActiveSet("gallery");
-              setCurrentIndex(0);
-            }}
+            onClick={() => handleSetChange("gallery")}
           >
             <img src={d20Icon} alt="D20 Icon" />
             Gallery
           </button>
           {/* <button
             className={activeSet === "testimonials" ? "active" : ""}
-            onClick={() => {
-              setActiveSet("testimonials");
-              setCurrentIndex(0);
-            }}
+            onClick={() => handleSetChange("testimonials")}
           >
             <img src={d20Icon} alt="D20 Icon" />
             Testimonials
           </button> */}
         </div>
       </div>
+
       <div className="desktop-adventures-section">
         <div className="adventure-text-container">
           <div className="overlay-text">
@@ -123,13 +135,11 @@ function AdventuresSection() {
               </>
             )}
           </div>
+
           <div className="slideshow-controls">
             <button
               className={activeSet === "gallery" ? "active" : ""}
-              onClick={() => {
-                setActiveSet("gallery");
-                setCurrentIndex(0);
-              }}
+              onClick={() => handleSetChange("gallery")}
             >
               <img src={d20Icon} alt="D20 Icon" />
               Gallery
@@ -138,10 +148,7 @@ function AdventuresSection() {
               className={`${
                 activeSet === "testimonials" ? "active" : ""
               } right`}
-              onClick={() => {
-                setActiveSet("testimonials");
-                setCurrentIndex(0);
-              }}
+              onClick={() => handleSetChange("testimonials")}
             >
               <img src={d20Icon} alt="D20 Icon" />
               Testimonials
@@ -150,6 +157,8 @@ function AdventuresSection() {
         </div>
 
         <div className="home-image-container">
+          <div className="home-image-container-back"></div>
+          <div className="slideshow-wrapper">
             {images.map((img, index) => (
               <img
                 key={index}
@@ -160,6 +169,7 @@ function AdventuresSection() {
                 }`}
               />
             ))}
+          </div>
 
           <div className="image-nav">
             {images.map((_, index) => (
@@ -168,7 +178,7 @@ function AdventuresSection() {
                 src={d20Icon}
                 alt={`Go to image ${index}`}
                 className={`nav-icon ${index === currentIndex ? "active" : ""}`}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => handleNavClick(index)}
               />
             ))}
           </div>
