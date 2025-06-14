@@ -58,46 +58,46 @@ Dungeons To Your Door delivers professionally hosted Dungeons & Dragons games di
 ### 1️⃣ **Home**
 - Landing page introducing the business.
 #### Desktop
-![Home Desktop](path/to/home-desktop.png)
+<img src="https://github.com/Nolan-Olhausen/DungeonsToYourDoor/blob/main/repo-images/dtydHomeDesktop.png" width="450" height="300" />
 
 #### Mobile
-![Home Mobile](path/to/home-mobile.png)
+<img src="https://github.com/Nolan-Olhausen/DungeonsToYourDoor/blob/main/repo-images/dtydHomeMobile.png" width="250" height="450" />
 
 ### 2️⃣ **About**
 - Brief description of the owner.
 #### Desktop
-![About Desktop](path/to/about-desktop.png)
+<img src="https://github.com/Nolan-Olhausen/DungeonsToYourDoor/blob/main/repo-images/dtydDMDesktop.png" width="450" height="300" />
 
 #### Mobile
-![About Mobile](path/to/about-mobile.png)
+<img src="https://github.com/Nolan-Olhausen/DungeonsToYourDoor/blob/main/repo-images/dtydDMMobile.png" width="250" height="450" />
 
 ### 3️⃣ **Gallery (The Adventures In Action)**
 - Rotating slideshow of session imagery. (Testimonial gallery included but hidden currently)
 - Fully responsive navigation using custom D20 icons.
 #### Desktop
-![Gallery Desktop](path/to/gallery-desktop.png)
+<img src="https://github.com/Nolan-Olhausen/DungeonsToYourDoor/blob/main/repo-images/dtydAdventuresDesktop.png" width="450" height="300" />
 
 #### Mobile
-![Gallery Mobile](path/to/gallery-mobile.png)
+<img src="https://github.com/Nolan-Olhausen/DungeonsToYourDoor/blob/main/repo-images/dtydAdventuresMobile.png" width="250" height="450" />
 
 ### 4️⃣ **Cost & Choices**
 - Lists available campaigns.
 - Descriptions of each adventure, with dynamic rotating cards showcasing campaign details.
 - Pricing breakdown included for transparency.
 #### Desktop
-![Cost Desktop](path/to/cost-desktop.png)
+<img src="https://github.com/Nolan-Olhausen/DungeonsToYourDoor/blob/main/repo-images/dtydPricingDesktop.png" width="450" height="300" />
 
 #### Mobile
-![Cost Mobile](path/to/cost-mobile.png)
+<img src="https://github.com/Nolan-Olhausen/DungeonsToYourDoor/blob/main/repo-images/dtydPricingMobile.png" width="250" height="450" />
 
 ### 5️⃣ **Contact**
 - Contact form for customer inquiries.
 - Integrated 3D dice roll demo as a visual flourish.
 #### Dice Roll Demo Desktop (GIF)
-![Dice Roll Demo](path/to/dice-roll.gif)
+<img src="https://github.com/Nolan-Olhausen/DungeonsToYourDoor/blob/main/repo-images/dtydContactDesktop.gif" width="450" height="300" />
 
 #### Dice Roll Demo Mobile (GIF)
-![Dice Roll Demo](path/to/dice-roll.gif)
+<img src="https://github.com/Nolan-Olhausen/DungeonsToYourDoor/blob/main/repo-images/dtydContactMobile.gif" width="250" height="450" />
 
 ---
 
