@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Dungeons To Your Door
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Dungeons To Your Door** is a fully responsive, custom-built website for a traveling tabletop RPG business, offering on-location 5e sessions for private groups. The platform showcases offerings, provides essential information to potential customers, and demonstrates unique interactive features such as a fully functional 3D d20 dice rolling mechanic.
 
-## Available Scripts
+Built with **React** and **JavaScript**, this project emphasizes responsive design and a highly engaging user interface.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Sections](#sections)
+5. [Deployment](#deployment)
+6. [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Business Concept:**  
+Dungeons To Your Door delivers professionally hosted Dungeons & Dragons games directly to private groups. This website serves as the company's online presence, showcasing available campaigns, pricing, and contact options.
 
-### `npm run build`
+**Design Philosophy:**  
+- Visually immersive.
+- Mobile first design.
+- Minimalist navigation and design.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Single-Page Application (SPA)** with smooth snap scrolling navigation.
+- **Fully Responsive Design**: optimized for both desktop and mobile.
+- **Dynamic Image Galleries**: event highlights.
+- **Auto-Rotating Slideshows** with manual navigation controls.
+- **Interactive 3D Dice Roller**: fully physics-based D20 roll demonstration.
+- **Contact Section** with owners contact information.
+- **SEO Metadata**: custom favicon, page title, and description for professional link previews.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Frontend Framework**: React.js
+- **UI/UX**: HTML5, CSS
+- **3D Engine**: Three.js + React Three Fiber
+- **Physics Engine**: @react-three/cannon
+- **Asset Handling**: Custom images, icons, and responsive images
+- **Hosting**: Code hosted through Heroku
+- **Version Control**: GitHub
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Sections
 
-## Learn More
+### 1️⃣ **Home**
+- Landing page introducing the business.
+#### Desktop
+![Home Desktop](path/to/home-desktop.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Mobile
+![Home Mobile](path/to/home-mobile.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2️⃣ **About**
+- Brief description of the owner.
+#### Desktop
+![About Desktop](path/to/about-desktop.png)
 
-### Code Splitting
+#### Mobile
+![About Mobile](path/to/about-mobile.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3️⃣ **Gallery (The Adventures In Action)**
+- Rotating slideshow of session imagery. (Testimonial gallery included but hidden currently)
+- Fully responsive navigation using custom D20 icons.
+#### Desktop
+![Gallery Desktop](path/to/gallery-desktop.png)
 
-### Analyzing the Bundle Size
+#### Mobile
+![Gallery Mobile](path/to/gallery-mobile.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 4️⃣ **Cost & Choices**
+- Lists available campaigns.
+- Descriptions of each adventure, with dynamic rotating cards showcasing campaign details.
+- Pricing breakdown included for transparency.
+#### Desktop
+![Cost Desktop](path/to/cost-desktop.png)
 
-### Making a Progressive Web App
+#### Mobile
+![Cost Mobile](path/to/cost-mobile.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 5️⃣ **Contact**
+- Contact form for customer inquiries.
+- Integrated 3D dice roll demo as a visual flourish.
+#### Dice Roll Demo Desktop (GIF)
+![Dice Roll Demo](path/to/dice-roll.gif)
 
-### Advanced Configuration
+#### Dice Roll Demo Mobile (GIF)
+![Dice Roll Demo](path/to/dice-roll.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The live site is accessible at:  
+👉 [https://www.dungeonstoyourdoor.com/](https://www.dungeonstoyourdoor.com/)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is licensed for personal/business use by Dungeons To Your Door.
+
+---
+

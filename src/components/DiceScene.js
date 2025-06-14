@@ -126,15 +126,18 @@ const D20 = (props) => {
     };
   }, [geometry]);
 
-  const materials = Array.from({ length: 20 }, (_, i) => {
-    let number = (i + 1).toString();
+  const faceNumbering = [
+    2, 20, 14, 4, 18, 8, 12, 5, 11, 6, 17, 7, 1, 19, 3, 10, 15, 13, 9, 16,
+  ];
 
-    // Add distinguishing dot for 6 and 9
-    if (number === "6" || number === "9") {
-      number += ".";
+  const materials = faceNumbering.map((number, i) => {
+    let displayNumber = number.toString();
+
+    if (displayNumber === "6" || displayNumber === "9") {
+      displayNumber += ".";
     }
 
-    const texture = createFaceTexture(number);
+    const texture = createFaceTexture(displayNumber);
     return <meshBasicMaterial key={i} attach={`material-${i}`} map={texture} />;
   });
 
@@ -247,4 +250,3 @@ export function DiceMobileScene() {
     </div>
   );
 }
-
