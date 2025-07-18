@@ -13,7 +13,6 @@ import print5 from "../assets/print5.jpg";
 import print6 from "../assets/print6.jpg";
 import print7 from "../assets/print7.jpg";
 
-
 const campaigns = [
   {
     title: "The White Flag Inn",
@@ -118,9 +117,15 @@ function PricingSection() {
           <h1>The Price of</h1>
           <h1>Creation</h1>
           <p>
-            Our collection of custom 3D prints brings your tabletop to life.
-            These examples showcase the detail and variety possible—from
-            miniatures to props. Contact for pricing and commissions.
+            Looking to bring your digital models to life? I offer high-quality
+            3D printing services tailored to tabletop gamers, hobbyists, and
+            creatives alike. Whether you have your own STL files or want to
+            choose from a growing library of ready-to-print models I own, I've
+            got you covered. Optional custom painting for a professional,
+            finished look (additional charge). Costs vary depending on the
+            model's size, detail, and print time. For a personalized quote,
+            please reach out directly with your file or idea, I'm happy to work
+            with you to make your vision a reality.
           </p>
         </>
       );
@@ -133,10 +138,12 @@ function PricingSection() {
         {renderHeaderText()}
 
         <div className="pricing-slideshow-container">
-           {activeData.map((item, index) => (
+          {activeData.map((item, index) => (
             <div
               key={index}
-              className={`pricing-card ${index === currentIndex ? "active" : ""}`}
+              className={`pricing-card ${
+                index === currentIndex ? "active" : ""
+              }`}
               style={{ "--bg-image": `url(${item.backgroundImage})` }}
             >
               {activeSet === "5e" && (
@@ -183,9 +190,7 @@ function PricingSection() {
       </div>
       <div className="desktop-pricing-section">
         <div className="pricing-text-container">
-          <div className="overlay-text">
-            {renderHeaderText()}
-          </div>
+          <div className="overlay-text">{renderHeaderText()}</div>
           <div className="slideshow-controls">
             <button
               className={activeSet === "5e" ? "active" : ""}
@@ -208,7 +213,9 @@ function PricingSection() {
           {activeData.map((item, index) => (
             <div
               key={index}
-              className={`campaign-slide ${index === currentIndex ? "active" : ""}`}
+              className={`campaign-slide ${
+                index === currentIndex ? "active" : ""
+              }`}
               style={{ "--bg-image": `url(${item.backgroundImage})` }}
             >
               <div className="campaign-background" />
