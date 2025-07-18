@@ -4,16 +4,13 @@ import "../index.css";
 import event1 from "../assets/event1.png";
 import event2 from "../assets/event2.png";
 import event3 from "../assets/event3.jpg";
-import print2 from "../assets/print2.jpg";
-import print5 from "../assets/print5.jpg";
-import print7 from "../assets/print7.jpg";
 import d20Icon from "../assets/d20FillLogo.png";
 
 function AdventuresSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timerRef = useRef(null);
 
-  const images = [event3, print7, event2, event1, print2, print5];
+  const images = [event3, event2, event1];
 
   const resetTimer = () => {
     if (timerRef.current) clearInterval(timerRef.current);

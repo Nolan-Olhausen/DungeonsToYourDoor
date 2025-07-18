@@ -39,9 +39,6 @@ const campaigns = [
 
 const prints = [
   {
-    backgroundImage: print1,
-  },
-  {
     backgroundImage: print2,
   },
   {
@@ -143,7 +140,7 @@ function PricingSection() {
               key={index}
               className={`pricing-card ${
                 index === currentIndex ? "active" : ""
-              }`}
+              } ${activeSet !== "5e" ? "no-fade" : ""}`}
               style={{ "--bg-image": `url(${item.backgroundImage})` }}
             >
               {activeSet === "5e" && (
@@ -215,7 +212,7 @@ function PricingSection() {
               key={index}
               className={`campaign-slide ${
                 index === currentIndex ? "active" : ""
-              }`}
+              } ${activeSet !== "5e" ? "no-fade" : ""}`}
               style={{ "--bg-image": `url(${item.backgroundImage})` }}
             >
               <div className="campaign-background" />
