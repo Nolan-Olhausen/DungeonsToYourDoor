@@ -594,6 +594,10 @@ p {
   gap: 1em;
 }
 
+.mobile-pricing-section .pricing-nav {
+  padding-bottom: 2em;
+}
+
 .pricing-nav .nav-icon {
   width: clamp(1rem, 0.5vw + 1rem, 2.5rem);
   height: auto;
