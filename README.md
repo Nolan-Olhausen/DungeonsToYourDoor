@@ -20,7 +20,7 @@ Built with **React** and **JavaScript**, this project emphasizes responsive desi
 ## Overview
 
 **Business Concept:**  
-Dungeons To Your Door delivers professionally hosted Dungeons & Dragons games directly to private groups. This website serves as the company's online presence, showcasing available campaigns, pricing, and contact options.
+Dungeons To Your Door delivers professionally hosted 5e games directly to private groups. This website serves as the company's online presence, showcasing available campaigns, pricing, and contact options.
 
 **Design Philosophy:**  
 - Visually immersive.
