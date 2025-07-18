@@ -28,7 +28,18 @@ function ContactSection() {
           </a>
           <br />
           <br />
-          <strong>By Sending:</strong> 707 812-0276
+          <strong>By Sending:</strong>{" "}
+          <a
+            href="https://www.instagram.com/dungeonstoyourdoor"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#3F6C51", textDecoration: "none" }}
+          >
+            @dungeonstoyourdoor
+          </a>
+          <br />
+          <br />
+          <strong>By Whispering Stone:</strong> 707 812-0276
         </p>
         <div className="dm-image-container">
           <div className="mobile-dice">
@@ -59,7 +70,18 @@ function ContactSection() {
             </a>
             <br />
             <br />
-            <strong>By Sending:</strong> 707 812-0276
+            <strong>By Sending:</strong>{" "}
+            <a
+              href="https://www.instagram.com/dungeonstoyourdoor"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#3F6C51", textDecoration: "none" }}
+            >
+              @dungeonstoyourdoor
+            </a>
+            <br />
+            <br />
+            <strong>By Whispering Stone:</strong> 707 812-0276
           </p>
         </div>
 

@@ -529,7 +529,7 @@ p {
   pointer-events: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .pricing-card::before {
@@ -570,6 +570,7 @@ p {
 .campaign-players {
   margin: 0;
   padding: 0;
+  padding-bottom: 3em;;
   line-height: 0.8;
 }
 
